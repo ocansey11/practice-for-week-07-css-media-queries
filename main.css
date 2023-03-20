@@ -86,12 +86,86 @@ header {
 
 /* Your code here */
 
+@media (min-width: 820px) and (max-width:1219px) {
+    .page{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar {
+        /*background-color: #6C547B;*/
+       flex-direction: column;
+       width: fit-content;
+    }
+}
+
 /* ----- Phase 1 - Wide Screen ----- */
 
 /* Your code here */
+
+@media (min-width: 1220px){
+        .page{
+            flex-direction: row;
+
+        }
+        .content{
+            flex-direction: row;
+        }
+}
 
 /* ===== PRINTING ===== */
 
 /* Phase 2 */
 
 /* Your code here */
+@media print and (orientation: landscape) {
+    /* landscape styles */
+    header{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .story-box{
+        position: relative;
+        background-color: white;
+        border: none;
+        filter: none;
+    }
+    .image-box{
+        width: 100px ;
+        height: 45px ;
+        position:absolute;
+        right:5rem;
+        top: 2.6rem;
+    }
+
+
+}
+
+@media print and (orientation: portrait) {
+    /* portrait styles */
+    header{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .story-box{
+        background-color: white;
+        border: none;
+        filter: none;
+    }
+    .image-box{
+        width: 100px ;
+        height: 45px ;
+        position:absolute;
+        right:5rem;
+        top: 2.6rem;
+    }
+}
